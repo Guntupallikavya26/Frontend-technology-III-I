@@ -2,14 +2,223 @@
 <html>
 <head>
 <title>My Portfolio</title>
-<link rel="stylesheet" href="stle.css">
+<style>
+    body{
+
+font-family:Arial;
+
+margin:0;
+
+transition:0.3s;
+
+}
+
+
+header{
+
+background:#222;
+
+color:white;
+
+padding:20px;
+
+text-align:center;
+
+}
+
+
+nav a{
+
+color:white;
+
+margin:10px;
+
+text-decoration:none;
+
+}
+
+
+
+section{
+
+padding:40px;
+
+text-align:center;
+
+}
+
+
+
+.profile{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+}
+
+
+
+button{
+
+padding:10px 20px;
+
+background:#007bff;
+
+color:white;
+
+border:none;
+
+cursor:pointer;
+
+margin:10px;
+
+}
+
+
+
+.container{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.card,.box{
+
+background:#eee;
+
+padding:20px;
+
+margin:15px;
+
+border-radius:10px;
+
+}
+
+
+
+input,textarea{
+
+display:block;
+
+margin:10px auto;
+
+padding:10px;
+
+width:80%;
+
+}
+
+.project-container{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.project-card{
+
+width:300px;
+
+background:white;
+
+padding:25px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+transition:0.3s;
+
+}
+
+
+
+.project-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+
+.project-card h3{
+
+color:#007bff;
+
+}
+
+
+
+.project-card button{
+
+margin-top:10px;
+
+}
+
+footer{
+
+background:#222;
+
+color:white;
+
+padding:15px;
+
+text-align:center;
+
+}
+
+
+
+.dark{
+
+background:#111;
+
+color:white;
+
+}
+
+
+
+@media(max-width:600px){
+
+
+nav a{
+
+display:block;
+
+}
+.dark{
+
+background:#222;
+
+color:white;
+
+}
+
+}
+</style>
 </head>
 <body>
 <header>
 <h1>My Portfolio</h1>
-<button onclick="darkMode()">
-🌙
-</button>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -25,7 +234,6 @@
 <p>
 B.Tech Student | Java Full Stack Developer
 </p>
-<a href="kavya resume.pdf" target="_blank">
 <button>
 Download Resume
 </button>
@@ -90,7 +298,7 @@ can be effectively combined to create an attractive and user-friendly interface.
 <p>
 HTML | CSS
 </p>
-<a href="https://guntupallikavya26.github.io/Frontend-technology-III-I/miniproject.html" target="_blank">
+<a href=" https://guntupallikavya26.github.io/Frontend-technology-III-I/student portfolio.html" target="_blank">
 <button>
 View Project
 </button>
@@ -143,7 +351,9 @@ View Project
 </div>
 </section>
 <section id="contact">
-<h2>Contact Me</h2>
+<button onclick="contactMe()">
+Contact Me
+</button>
 <p>Email:kavyaguntupalli226@gmail.com</p>
 <p>
 GitHub:
@@ -161,10 +371,39 @@ My LinkedIn
 </p>
 </section>
 <footer>
-<p>
-© My Portfolio
-</p>
+<p>© <span id="year"></span> Kavya Portfolio</p>
 </footer>
-<script src="script.js"></script>
+<script>
+
+window.onload = function(){
+
+alert("Welcome to Kavya's Portfolio 😊");
+
+}
+
+
+
+
+function contactMe(){
+
+alert("Thank you for contacting me!");
+
+}
+
+
+
+
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+
+let year = new Date().getFullYear();
+
+document.getElementById("year").innerHTML = year;
+</script>
 </body>
 </html>
